@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Geniusshit.c                                       :+:      :+:    :+:   */
+/*   mazevalidation.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shagazi <shagazi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/11 22:35:04 by shagazi           #+#    #+#             */
-/*   Updated: 2018/04/14 00:20:20 by shagazi          ###   ########.fr       */
+/*   Updated: 2018/04/16 11:44:38 by shagazi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "myheadergrimly.h"
+#include "grimly.h"
 
 static int		char_check(char **line)
 {
@@ -34,9 +34,8 @@ static char *nl(char **file, char **line)
 {
 	char *tmp;
 
-	*(ft_strchr(*file, '\n')) = '\0';
+	*(ft_strchr(*file, '\n') + 1) = '\0';
 	tmp = *file;
-	*(ft_strchr(tmp, '\0')) = '\n';
 	*line = ft_strdup(tmp);
 	return (*line);
 
